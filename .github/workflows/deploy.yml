@@ -24,6 +24,7 @@ jobs:
         run: |
           ssh ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
             cd /var/www/html/LOGIN-form
+            sudo chown -R ubuntu:ubuntu /var/www/html/LOGIN-form
             sudo git pull origin main
             sudo chown -R www-data:www-data /var/www/html/LOGIN-form
             sudo systemctl restart nginx
