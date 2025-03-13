@@ -23,8 +23,8 @@ jobs:
       - name: Deploy to EC2
         run: |
           ssh ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
-            cd /var/www/html
+            cd /var/www/html/LOGIN-form
             sudo git pull origin main
-            sudo chown -R www-data:www-data /var/www/html
+            sudo chown -R www-data:www-data /var/www/html/LOGIN-form
             sudo systemctl restart nginx
           EOF
