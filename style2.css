@@ -1,0 +1,118 @@
+/* Reset & Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #6971da;
+    padding: 15px 20px;  /* Added more padding */
+    color: rgb(255, 255, 255);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    right: 100px:
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 10px; /* Fixes "ShopEase" being cut off */
+}
+
+.open-btn {
+    font-size: 20px;
+    cursor: pointer;
+    background: white;
+    color: #e01893;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.open-btn:hover {
+    background: #e01893;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 60px; /* Moves sidebar below navbar */
+    width: 250px;
+    height: calc(100% - 60px);
+    background: #222;
+    padding-top: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Main Content (Fixed Overlap & Added Gap) */
+.content {
+    padding: 120px 20px; /* Increased top padding for better spacing */
+    text-align: center;
+}
+
+/* Product Layout */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product p {
+    margin-top: 10px;
+    font-size: 16px;
+}
